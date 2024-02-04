@@ -5,3 +5,9 @@ Priority Encoder is a combinational digital circuit, that take 2^n input lines a
 
 Working of Priority Encoder:
 D7 is of highest priority, and D0 is of lowest priority. If D4 is on priority we ignore all the input lines before D4, as given diagram. 
+
+This repo. consists of:
+1) priority_encoder.v -- behavioral level modelling
+2) priority_en_df.v -- data flow level modelling
+3) priority_en_gl.v -- gate level modelling
+4) priority_tb -- test bench.
