@@ -1,0 +1,29 @@
+module priority_tb;
+  reg en;
+  reg [7:0]in;
+  wire [2:0]o;
+  
+  priority_en_gl dut(en, in, o);
+  initial
+    begin
+      $monitor("en=%b in=%b o=%b", en, in, o);
+      en=1; in = 128;
+      #5
+      en=1; in=64;
+      #5
+      en=1; in=32;
+      #5
+      en=1; in=16;
+      #5
+      en=1; in=8;
+      #5
+      en=1; in=4;
+      #5
+      en=1; in=2;
+      #5
+      en=1; in=1;
+      #5
+      en=0; in=8'bx;
+      $finish;
+    end
+endmodule
